@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/* div要素に対する共通指定 */
+div {
+  width: 150px;
+  height: 150px;
+  border: 1px solid #999;
+  margin: 10px;
+  padding: 5px;
+  float: left;
+  /*ここから */
+  background: url(../img/bg_cat.png) right bottom no-repeat;
+  /*ここまで */
+}
+/*ここから */
+/* background-sizeをそれぞれ指定 */
+.px { background-size: 150px 50px; }
+.per { background-size: 50% 50%; }
+.cover { background-size: cover; }
+.contain { background-size: contain; }
+/*ここまで */
+
+/* p要素のマージンを指定 */
+p { margin: 0; }

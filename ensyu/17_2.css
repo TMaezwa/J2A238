@@ -1,0 +1,6 @@
+@charset "UTF-8";
+body{
+    height: 100vh;
+    margin: 0;
+    background: url(../img/bg_cat.png) right bottom no-repeat;
+}
