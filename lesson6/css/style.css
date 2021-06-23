@@ -1,0 +1,238 @@
+@charset "utf-8";
+
+/* 初期スタイル調整 */
+* {
+  box-sizing: border-box;
+}
+
+/* body全体の初期スタイル調整 */
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Arial, "メイリオ", Meiryo, sans-serif;
+  color: #806342;
+  background-color: #fff;
+}
+
+/* 各要素の初期スタイル調整 */
+h1,h2{
+  margin-top: 0;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+a{
+  color: #806342;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+
+p{
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+ul{
+  margin: 1em 0;
+  padding: 0;
+  list-style: none;
+}
+figure{
+  margin: 0;
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+address{font-style: normal;}
+/* 初期スタイル調整ここまで */
+
+
+/* --------------------------------------------------
+  細部のスタイル指定ここから
+-------------------------------------------------- */
+
+/* ヘッダー */
+.header {
+   width: 1000px;/* 横幅の指定 */
+   margin: 0 auto;/* 左右中央揃え */
+   padding: 20px 0;/* 上下・左右の内余白 */
+}
+
+/* ロゴ */
+.logo {
+   margin: 0;/* 上下左右の外余白 */
+   text-align: center;/* テキスト中央揃え */
+}
+
+/* メイン */
+.main{
+  width: 1000px;
+  margin: 0 auto;
+}
+/* トップ（メインイメージ） */
+.top{
+  margin-bottom: 20px;
+  text-align: center;
+}
+/* ナビゲーション */
+.nav{
+  margin-bottom: 50px;
+  text-align: center;
+}
+/* ナビリスト */
+.nav-list li{
+  display: inline-block;
+  margin: 0;
+  border-left: 1px solid #806342;
+}
+.nav-list li:first-child{
+  border-left: none;
+}
+.nav-list a{
+  display: inline-block;
+  padding: 0 15px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+/* セクション */
+.section{
+  margin: 0 auto 80px;
+}
+/* 見出し */
+.heading{
+  margin-bottom: 40px;
+  text-align: center;
+}
+/* アバウト */
+.about{
+  text-align: center;
+}
+/* メニュー */
+.menu{
+  text-align: center;
+}
+/* メニューリスト */
+.menu-list{
+  display: inline-block;/* ul要素の横幅を自動的に定めている */
+  margin-left: 30px;/* 左のマージン */
+  list-style: disc;/* リストの先頭にリストマーク（・）をつける */
+  text-align: left;/* テキスト左揃え */
+}
+.menu-list li{
+  margin-bottom: 10px;/* 下のマージン */
+}
+/* フォト */
+.photos{
+  width: 750px;
+}
+/* フォトリスト */
+.photos-list li{
+  margin-bottom: 30px;
+}
+.photos figcaption{
+  font-size: 12px;
+}
+/* アクセス */
+.access {
+  width: 600px; /* アクセス全体の横幅 */
+}
+/* アクセス 左右横並び */
+.access-row {
+  /* flexbox（横並びにする要素の親に指定） */
+  display: flex;
+  /* flexboxの中身を左右均等に配置する */
+  justify-content: space-between;
+  /* flexboxの中身の上下を中央揃えにする */
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* 左側（フレックスアイテム） */
+.access-address {
+  font-size: 14px;
+}
+.access-address strong {
+  display: block; /* ブロックレベルとして扱う */
+  margin: 10px 0;
+  font-size: 22px;
+}
+
+/* 右側（フレックスアイテム） */
+.access-map {
+  /* フレックスアイテムへの指定 */
+  flex: 0 1 295px;
+  max-width: 295px;
+}
+
+/* フッター */
+.footer {
+  min-width: 1000px; /* 最小幅の指定 */
+  margin: 0 auto;
+  padding: 20px 0;
+  background-color: #806342; /* 背景色の指定 */
+}
+
+/* フッターの中身 */
+.footer-container {
+  /* flexbox（横並びにする要素の親に指定） */
+  display: flex;
+  width: 660px;
+  margin: 0 auto;
+}
+
+/* フッターロゴ（左側） */
+.footer-logo {
+  /* フレックスアイテムへの指定 */
+  flex: 0 1 200px;
+  max-width: 200px;
+  margin: 0;
+}
+
+/* フッター その他要素（右側） */
+.footer-body {
+  /* フレックスアイテムへの指定 */
+  flex: 0 1 auto;
+  padding-top: 20px;
+}
+
+/* フッターナビ */
+.footer-nav {
+  margin-bottom: 20px;
+}
+
+/* フッターナビリスト */
+.footer-nav-list li {
+  display: inline-block;
+  margin: 0;
+  border-left: 1px solid #fff;
+}
+.footer-nav-list li:first-child {
+  border-left: none; /* 最初のliから左の境界線を消す */
+}
+.footer-nav-list a {
+  display: inline-block;
+  padding: 0 15px;
+  line-height: 1.2;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* コピーライト */
+.copyright {
+  margin: 0;
+  padding-left: 15px;
+  color: #fff;
+}
+.copyright small {
+  font-size: 11px;
+}
+
+/* ここから追加課題用の設定 */
+
+/* YouTube・Google MAPのサイズ */
+
+/* トップ画像をスライド */
+
+/* トップに戻るボタンを右下に固定 */
