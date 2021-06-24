@@ -120,9 +120,21 @@ address{font-style: normal;}
   list-style: disc;/* リストの先頭にリストマーク（・）をつける */
   text-align: left;/* テキスト左揃え */
 }
+/*マーカーを指定*/
 .menu-list li{
-  margin-bottom: 10px;/* 下のマージン */
+  list-style: none;
 }
+.menu-list li::before{
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  background-image: url(../img/menu_li.png);
+  background-size: contain;
+  vertical-align: middle;
+}
+
 /* フォト */
 .photos{
   width: 750px;
@@ -232,7 +244,37 @@ address{font-style: normal;}
 /* ここから追加課題用の設定 */
 
 /* YouTube・Google MAPのサイズ */
-
+figure iframe{
+  width: 100%;
+}
 /* トップ画像をスライド */
-
+.slide{
+  white-space: nowrap;
+  overflow: hidden;
+}
+.slide img{
+  width: inherit;
+  height: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+@keyframes slide-4{
+  0%{margin-left: 0;}
+  33%{margin-left: -100%;}
+  66%{margin-left: -200%;}
+  100%{margin-left: -300%;}
+}
+.slide > :first-child{
+  animation-name: slide-4;
+  animation-duration: 40s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 5s;
+  animation-iteration-count: infinite;
+}
 /* トップに戻るボタンを右下に固定 */
+.pagetop{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
