@@ -44,7 +44,7 @@ li {
 }
 
 .section:nth-of-type(odd) {
-  background-color: #f7f7f7;
+  background-color: #14caac; /*#f7f7f7*/
 }
 
 .inner {
@@ -79,6 +79,7 @@ li {
   z-index: 1;
   width: 100%;
   background-color: #fff;
+  
   box-shadow: 0 5px 10px -6px rgba(0,0,0,.1);
 }
 
@@ -146,6 +147,9 @@ li {
   justify-content: center;
   height: 85vh;
   text-align: center;
+  background: center;
+  background-image: url(../img/japanese-paper_00397.jpg);
+  
 }
 
 .main-visual-inner {
@@ -334,6 +338,61 @@ li {
   background-position: right center;
 }
 
+/*----ボタンはここに追加----*/
+.btn-shine {
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 45px;
+  width: 180px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  outline: 1px solid;
+  outline-color: rgba(202, 76, 76, 0.5);
+  outline-offset: 0px;
+  text-shadow: none;
+  transition: all 1.2s cubic-bezier(0.2, 1, 0.2, 1);
+}
+
+.btn-shine:hover {
+  border-color: rgb(184, 67, 67);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+  outline-color: transparent;
+  outline-offset: 12px;
+  text-shadow: 2px 2px 3px #000;
+}
+
+
+/* ここはコピーしなくてOK　*/
+.container-02 {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #e00364;
+}
+
+
+.btn-push {
+  display: inline-block;
+  max-width: 180px;
+  text-align: left;
+  background-color: #00ffbb;
+  font-size: 16px;
+  color: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 24px;
+  border-radius: 4px;
+  border-bottom: 4px solid rgba(7, 150, 112, 0.363);
+}
+
+.btn-push:active {
+    transform: translateY(4px);
+    border-bottom: none;
+}
 /*--------------------------------
  Skill
 ---------------------------------*/
@@ -418,6 +477,7 @@ li {
 .page-top .material-icons-outlined {
   vertical-align: bottom;
   color: #fff;
+  
 }
 
 /*--------------------------------
